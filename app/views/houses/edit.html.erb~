@@ -1,6 +1,6 @@
 <h1>Edit <%= @house.address %></h1>
 <%= form_for @house do |f| %>
 
-				<%= render 'form', :f => f %>
+				<% render 'form', :f => f %>
 
 <% end %>

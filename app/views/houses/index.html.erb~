@@ -23,7 +23,7 @@
 												<td>
 																<%= link_to "Show", :controller => "houses", :action => "show", :id => house.id %>|
 																<%= link_to "Edit", :url => "#" %>|
-																<%= link_to "Delete", @house, method: :delete, :confirm => "Really?", :title => "Delete #{house.address}" %>
+																<%= link_to "Delete", house, method: :delete,:id => house.id, :confirm => "Really?", :title => "Delete #{house.address}" %>
 												</td>
 								</tr>
 				<% end %>

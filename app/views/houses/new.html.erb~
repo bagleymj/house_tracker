@@ -1,2 +1,6 @@
-<h1>Houses#new</h1>
-<p>Find me in app/views/houses/new.html.erb</p>
+<h1>New House</h1>
+<%= form_for @house do |f| %>
+
+				<%= render 'form', :f => f %>
+
+<%end%>

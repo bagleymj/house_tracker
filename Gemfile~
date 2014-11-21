@@ -37,7 +37,7 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'attr_accessible'
+gem 'protected_attributes'
 
 
 group :test do

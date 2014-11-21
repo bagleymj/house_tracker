@@ -21,6 +21,16 @@ class HousesController < ApplicationController
   end
 
 	def edit
+					@house = House.find(params[:id])
+	end
+
+	def update
+					@house = House.find(params[:id])
+					if @house.update_attributes(params[:house])
+									redirect_to :action => :show, :id => @house.id
+					else
+									render :edit
+					end
 	end
 
   def destroy 
@@ -29,6 +39,4 @@ class HousesController < ApplicationController
 					redirect_to houses_path
   end
 
-	def house_params
-	end
 end
