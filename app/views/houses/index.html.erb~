@@ -1,5 +1,5 @@
 <h1>Houses</h2>
-<%= link_to "Add", :url => "#" %>
+<%= link_to "Add", :controller => "houses", :action => "new" %>
 <table>
 				<tr>
 								<td>
@@ -23,7 +23,7 @@
 												<td>
 																<%= link_to "Show", :controller => "houses", :action => "show", :id => house.id %>|
 																<%= link_to "Edit", :url => "#" %>|
-																<%= link_to "Delete", :url => "#"%>
+																<%= link_to "Delete", @house, method: :delete, :confirm => "Really?", :title => "Delete #{house.address}" %>
 												</td>
 								</tr>
 				<% end %>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   #get 'houses/delete'
 	resources :houses
+	delete 'houses/:id' => 'houses#destroy'
 
   root 'houses#index'
 

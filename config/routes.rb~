@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  get 'houses/index'
+  #get 'houses/index'
 
-  get 'houses/show'
+  #get 'houses/show'
 
-  get 'houses/new'
+  #get 'houses/new'
 
-  get 'houses/edit'
+  #get 'houses/edit'
 
-  get 'houses/delete'
+  #get 'houses/delete'
+	resources :houses
 
   root 'houses#index'
 

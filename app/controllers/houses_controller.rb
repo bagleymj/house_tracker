@@ -23,7 +23,10 @@ class HousesController < ApplicationController
 	def edit
 	end
 
-  def delete
+  def destroy 
+					@house = House.find(params[:id])
+					@house.destroy
+					redirect_to houses_path
   end
 
 	def house_params
