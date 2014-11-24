@@ -8,7 +8,7 @@
       </td>
       <td>
         <%= score.score %>
-        </total>
+      </td>
     </tr>
   </table>
 <% end %>

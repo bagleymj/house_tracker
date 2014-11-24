@@ -1,7 +1,7 @@
 <h1><%= @house.address %></h1>
 <p><strong>Price:</strong> <%= @house.price %></p>
-<% @scores.each do |score| %>
-  <table>
+<table>
+  <% @scores.each do |score| %>
     <tr>
       <td>
         <%= score.category.name %>
@@ -10,5 +10,5 @@
         <%= score.score %>
       </td>
     </tr>
-  </table>
-<% end %>
+  <% end %>
+</table>

@@ -1,3 +1,14 @@
 class House < ActiveRecord::Base
-				attr_accessible :address, :price
+  attr_accessible :address, :price
+
+  has_many :scores
+
+  def totalscore
+    totaled_score = 0
+    House.scores.each do |score|
+      totaled_score = totaled_score + score.score
+    end
+    return totaled_score
+  end
+
 end

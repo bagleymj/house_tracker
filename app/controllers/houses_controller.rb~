@@ -5,6 +5,7 @@ class HousesController < ApplicationController
 
   def show
 					@house = House.find(params[:id])
+          @scores = @house.scores
   end
 
   def new
@@ -20,7 +21,7 @@ class HousesController < ApplicationController
         score.score = 0
         score.save
       end
-			redirect_to house_path
+			redirect_to :action => :show, :id => @house.id
 	  else
 			render :new
 	  end
