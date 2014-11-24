@@ -5,29 +5,30 @@ class HousesController < ApplicationController
 
   def show
 					@house = House.find(params[:id])
+          @scores = @house.scores
   end
 
   def new
 					@house = House.new
-          @scores = []
-          Category.all.each do |category| 
-            score = @house.scores.new
-            score.category_id = category.id
-            @scores << score
-          end
   end
 
   def create
-					@house = House.new(params[:house])
-					if @house.save
-									redirect_to houses_path
-					else
-									render :new
-					end
+	  @house = House.new(params[:house])
+		if @house.save             
+      Category.all.each do |category| 
+        score = @house.scores.new
+        score.category_id = category.id
+        score.score = 0
+        score.save
+      end
+			redirect_to :action => :show, :id => @house.id
+	  else
+			render :new
+	  end
   end
 
 	def edit
-					@house = House.find(params[:id])
+	  @house = House.find(params[:id])
 	end
 
 	def update

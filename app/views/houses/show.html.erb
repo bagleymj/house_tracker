@@ -1,2 +1,14 @@
 <h1><%= @house.address %></h1>
 <p><strong>Price:</strong> <%= @house.price %></p>
+<% @scores.each do |score| %>
+  <table>
+    <tr>
+      <td>
+        <%= score.category.name %>
+      </td>
+      <td>
+        <%= score.score %>
+      </td>
+    </tr>
+  </table>
+<% end %>

@@ -1,2 +1,14 @@
-<h1>Houses#show</h1>
-<p>Find me in app/views/houses/show.html.erb</p>
+<h1><%= @house.address %></h1>
+<p><strong>Price:</strong> <%= @house.price %></p>
+<% @scores.each do |score| %>
+  <table>
+    <tr>
+      <td>
+        <%= score.category.name %>
+      </td>
+      <td>
+        <%= score.score %>
+        </total>
+    </tr>
+  </table>
+<% end %>
