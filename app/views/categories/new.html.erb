@@ -1,15 +1,4 @@
 <h1>New Category</h1>
 <%= form_for @category do |f| %>
-				<div>
-								<%= f.label :name %>:
-								<%= f.text_field :name %>
-				</div>
-				<div>
-								<%= f.label :rating %>
-								<%= f.text_field :rating %>
-				</div>
-				<div>
-								<%= f.submit %>
-				</div>	
-
+  <%= render 'form', :f => f %>
 <% end %>

@@ -1,23 +1,29 @@
 <h1>Categories</h1>
-<%= link_to :controller => :categories, :action => :new %>
+<%= link_to "Add category", :controller => :categories, :action => :new %>
 <table>
-				<tr>
-								<td>
-												<strong>Name</strong>
-								</td>
-								<td>
-												<strong>Rating</strong>
-								</td>
-				</tr>
-				<% @categories.each do |category| %>
-								<tr>
-												<td>
-																<%= category.name %>
-												</td>
-												<td>
-																<%= category.rating %>
-												</td>
-								</tr>
-				<% end %>	
+  <tr>
+    <td>
+                        <strong>Name</strong>
+                </td>
+                <td>
+                        <strong>Rating</strong>
+                </td>
+                <td>
+                  <strong>Actions</strong>
+                </td>
+        </tr>
+        <% @categories.each do |category| %>
+                <tr>
+                        <td>
+                                <%= category.name %>
+                        </td>
+                        <td>
+                                <%= category.rating %>
+                        </td>
+                        <td>
+                          <%= link_to "Edit", :controller => :categories, :action => :edit, :id => category.id %> |
+                          <%= link_to "Delete", category, method: :delete, :confirm => "Really?", :id => category.id %>
+                </tr>
+        <% end %> 
 
 </table>
