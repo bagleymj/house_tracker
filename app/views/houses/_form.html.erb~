@@ -9,7 +9,7 @@
   <% @scores.each do |score| %>
     <div>
       <strong><%= score.category.name %></strong>
-      <% #f.text_field @house.scores.where(:category_id => #{category.id})[0] %>
+      <!--<% f.text_field @house.scores.where(:category_id => #{category.id})[0] %>-->
     </div>
   <% end %>
 <div>

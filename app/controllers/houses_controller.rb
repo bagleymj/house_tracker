@@ -9,6 +9,12 @@ class HousesController < ApplicationController
 
   def new
 					@house = House.new
+          @scores = []
+          Category.all.each do |category| 
+            score = @house.scores.new
+            score.category_id = category.id
+            @scores << score
+          end
   end
 
   def create

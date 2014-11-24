@@ -9,6 +9,12 @@ class HousesController < ApplicationController
 
   def new
 					@house = House.new
+          @scores = []
+          Category.all.each do |category| 
+            score = @house.scores.new
+            score.category_id = category.id
+            score >> @scores
+          end
   end
 
   def create
@@ -25,6 +31,12 @@ class HousesController < ApplicationController
 	end
 
 	def update
+					@house = House.find(params[:id])
+					if @house.update_attributes(params[:house])
+									redirect_to :action => :show, :id => @house.id
+					else
+									render :edit
+					end
 	end
 
   def destroy 

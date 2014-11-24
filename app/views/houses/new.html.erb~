@@ -2,5 +2,14 @@
 <%= form_for @house do |f| %>
 
 				<%= render 'form', :f => f %>
+        <% @categories.each do |category| %>
+          <table>
+            <tr>
+              <td>
+                <%= category.name %>
+              </td>
+            </tr>
+          </table>
+        <% end %>
 
 <%end%>

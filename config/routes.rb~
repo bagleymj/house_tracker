@@ -1,33 +1,8 @@
 Rails.application.routes.draw do
-  get 'categories/index'
+  get 'ratings/rating'
 
-  get 'categories/new'
-
-  get 'categories/show'
-
-  get 'categories/edit'
-
-  get 'categories/delete'
-
-  get 'index/new'
-
-  get 'index/show'
-
-  get 'index/edit'
-
-  get 'index/delete'
-
-  #get 'houses/index'
-
-  #get 'houses/show'
-
-  #get 'houses/new'
-
-  #get 'houses/edit'
-
-  #get 'houses/delete'
 	resources :houses
-	delete 'houses/:id' => 'houses#destroy'
+	resources :categories
 
   root 'houses#index'
 
