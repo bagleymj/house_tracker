@@ -6,9 +6,6 @@
                         <strong>Name</strong>
                 </td>
                 <td>
-                        <strong>Rating</strong>
-                </td>
-                <td>
                   <strong>Actions</strong>
                 </td>
         </tr>
@@ -16,9 +13,6 @@
                 <tr>
                         <td>
                                 <%= category.name %>
-                        </td>
-                        <td>
-                                <%= category.rating %>
                         </td>
                         <td>
                           <%= link_to "Edit", :controller => :categories, :action => :edit, :id => category.id %> |

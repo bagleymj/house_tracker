@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'ratings/rating'
+
 	resources :houses
 	resources :categories
 

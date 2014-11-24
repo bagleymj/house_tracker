@@ -22,7 +22,7 @@
                         </td>
                         <td>
                           <%= link_to "Edit", :controller => :categories, :action => :edit, :id => category.id %> |
-                          <%= link_to "Delete", category, method: :delete, :confirm => "Really?", :id => category.id %>
+                          <%= link_to "Delete", category, method: :delete, :id => category.id, :confirm => "Really?" %>
                 </tr>
         <% end %> 
 

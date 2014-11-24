@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: Floors
-  rating: 1
+  address: MyString
+  price: 
+  price: 
 
 two:
-  name: Kitchen
-  rating: 5
+  address: MyString
+  price: 
+  price: 
