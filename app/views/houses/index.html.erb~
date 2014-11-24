@@ -20,9 +20,12 @@
 												<td>
 																<%= house.price %>
 												</td>
+                        <td>
+                          <%= house.totalscore(house.id) %>
+                        </td>
 												<td>
 																<%= link_to "Show", :controller => "houses", :action => "show", :id => house.id %>|
-																<%= link_to "Edit", :url => "#" %>|
+																<%= link_to "Edit", :controller => "houses", :action => "edit", :id => house.id %>|
 																<%= link_to "Delete", house, method: :delete,:id => house.id, :confirm => "Really?", :title => "Delete #{house.address}" %>
 												</td>
 								</tr>
