@@ -4,6 +4,8 @@ class ScoresController < ApplicationController
     @scores = @house.scores
   end
   def update
+    #@scores = Score.update_attributes(params[:products])
+    #redirect_to :controller => :houses, :action => :index
     @scores = params[:scores]
     @scores.each do |score|
       old_score = Score.find(score[0])

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'ratings/rating'
 
 	resources :houses
 	resources :categories
+  #resources :scores
+  get 'scores/score_house'
+  put 'scores/update'
 
   root 'houses#index'
 

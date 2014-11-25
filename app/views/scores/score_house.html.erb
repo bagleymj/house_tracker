@@ -1,0 +1,18 @@
+<h1><%= @house.address %></h1>
+<%= form_tag :controller => :scores, :action => :update, :method => :put do %>
+  <table>
+    <%  @scores.each do |score| %>
+      <tr>
+        <td>
+          <%= score.category.name %>
+        </td>
+        <td>
+          <%= fields_for "scores[]", score do |f| %>
+            <%= f.text_field :score %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<p><%= submit_tag "Submit" %></p>
+<% end %>

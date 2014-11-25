@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
 	resources :houses
 	resources :categories
+  #resources :scores
+  get 'scores/score_house'
+  post 'scores/update'
 
   root 'houses#index'
 
