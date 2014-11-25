@@ -21,7 +21,7 @@ class HousesController < ApplicationController
         score.score = 0
         score.save
       end
-			redirect_to :action => :show, :id => @house.id
+			redirect_to :controller => :scores, :action => :score_house, :id => @house.id
 	  else
 			render :new
 	  end

@@ -18,7 +18,7 @@
 				<% @houses.each do |house| %>
 								<tr>
 												<td>
-																<%= house.address %>
+                          <%= link_to house.address, :action => :show, :id => house.id %>
 												</td>
 												<td>
 																<%= house.price %>
