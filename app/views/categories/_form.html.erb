@@ -3,6 +3,10 @@
 								<%= f.label :name %>:
 								<%= f.text_field :name %>
 				</div>
+        <div>
+          <h2>Priority</h2>
+          <%= f.select(:modifier, [['Highest', 4],['High', 2], ['Moderate', 1], ['Low', 0.5], ['Lowest', 0.25]]) %>
+        </div>
 				<div>
 								<%= f.submit %>
 				</div>	
